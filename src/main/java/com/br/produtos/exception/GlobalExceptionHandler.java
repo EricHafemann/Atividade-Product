@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
             ProdutoNaoEncontradoException ex,
             HttpServletRequest request) {
         ErroResponse erro = ErroResponse.builder()
-                .menssagem(ex.getMessage())
+                .mensagem(ex.getMessage())
                 .data(LocalDateTime.now())
                 .path(request.getRequestURI())
                 .status(HttpStatus.NOT_FOUND.value())
@@ -34,7 +34,7 @@ public class GlobalExceptionHandler {
             IllegalArgumentException ex,
             HttpServletRequest request) {
         ErroResponse erro = ErroResponse.builder()
-                .menssagem(ex.getMessage())
+                .mensagem(ex.getMessage())
                 .data(LocalDateTime.now())
                 .path(request.getRequestURI())
                 .status(HttpStatus.BAD_REQUEST.value())
@@ -48,7 +48,7 @@ public class GlobalExceptionHandler {
             DataIntegrityViolationException ex,
             HttpServletRequest request) {
         ErroResponse erro = ErroResponse.builder()
-                .menssagem("Declare os atributos necessários !")
+                .mensagem("Declare os atributos necessários !")
                 .data(LocalDateTime.now())
                 .path(request.getRequestURI())
                 .status(HttpStatus.BAD_REQUEST.value())
@@ -62,7 +62,7 @@ public class GlobalExceptionHandler {
             Exception ex,
             HttpServletRequest request) {
         ErroResponse erro = ErroResponse.builder()
-                .menssagem(ex.getMessage())
+                .mensagem(ex.getMessage())
                 .data(LocalDateTime.now())
                 .path(request.getRequestURI())
                 .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
@@ -81,7 +81,7 @@ public class GlobalExceptionHandler {
                 .collect(Collectors.joining("; "));
 
         ErroResponse erro = ErroResponse.builder()
-                .menssagem(ex.getMessage())
+                .mensagem(ex.getMessage())
                 .data(LocalDateTime.now())
                 .path(request.getRequestURI())
                 .status(HttpStatus.BAD_REQUEST.value())

@@ -1,10 +1,9 @@
 package com.br.produtos.controller;
 
 import com.br.produtos.dto.ErroResponse;
-import com.br.produtos.dto.ProdutoCreateRequest;
-import com.br.produtos.dto.ProdutoResponse;
-import com.br.produtos.dto.ProdutoUpdateRequest;
-import com.br.produtos.entity.ProdutoEntity;
+import com.br.produtos.dto.produto.ProdutoCreateRequest;
+import com.br.produtos.dto.produto.ProdutoResponse;
+import com.br.produtos.dto.produto.ProdutoUpdateRequest;
 import com.br.produtos.service.ProdutoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -154,7 +153,7 @@ public class ProdutoController {
             summary = "Altera um produto ",
             description = "Altera um produto pelo id."
     )
-    @ApiResponses({
+    @ApiResponses({ 
             @ApiResponse(
                     responseCode = "200",
                     description = "Produtos atualizado com sucesso."

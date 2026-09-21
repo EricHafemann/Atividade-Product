@@ -1,8 +1,8 @@
 package com.br.produtos.service;
 
-import com.br.produtos.dto.ProdutoCreateRequest;
-import com.br.produtos.dto.ProdutoResponse;
-import com.br.produtos.dto.ProdutoUpdateRequest;
+import com.br.produtos.dto.produto.ProdutoCreateRequest;
+import com.br.produtos.dto.produto.ProdutoResponse;
+import com.br.produtos.dto.produto.ProdutoUpdateRequest;
 import com.br.produtos.entity.ProdutoEntity;
 import com.br.produtos.exception.ProdutoNaoEncontradoException;
 import com.br.produtos.mapper.ProdutoMapper;
